@@ -14,6 +14,7 @@
 /* Define to 1 if you have <alloca.h> and it should be used (not on Ultrix).
    */
 #cmakedefine HAVE_ALLOCA_H 1
+#cmakedefine HAVE_MALLOC_H 1
 
 /* Define to 1 if you have the <arpa/inet.h> header file. */
 
