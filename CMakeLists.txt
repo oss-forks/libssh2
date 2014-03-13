@@ -25,6 +25,13 @@ ENDIF()
 INCLUDE("${OPENSSL_INCLUDE_DIR}/openssl.cmake" OPTIONAL)
 
 ##################################################################################################################
+## help FIND_PACKAGE to detect this library
+
+SET(LIBSSH2_FOUND TRUE CACHE INTERNAL "" FORCE)
+SET(LIBSSH2_INCLUDE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/include" CACHE INTERNAL "" FORCE)
+SET(LIBSSH2_LIBRARY "libssh2" CACHE INTERNAL "" FORCE)
+
+##################################################################################################################
 ## compiler flags
 
 INCLUDE(CheckTypeSize)
