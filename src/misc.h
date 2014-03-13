@@ -91,4 +91,8 @@ int __cdecl _libssh2_gettimeofday(struct timeval *tp, void *tzp);
 #endif
 #endif
 
+#ifdef _MSC_VER
+ #define snprintf _snprintf
+#endif
+
 #endif /* _LIBSSH2_MISC_H */

@@ -34,6 +34,15 @@ SET(LIBSSH2_LIBRARY "libssh2" CACHE INTERNAL "" FORCE)
 ##################################################################################################################
 ## compiler flags
 
+IF(MSVC)
+	ADD_DEFINITIONS(/wd4244)
+	ADD_DEFINITIONS(-D_CRT_SECURE_NO_DEPRECATE=1)
+	ADD_DEFINITIONS(-D_CRT_SECURE_NO_WARNINGS=1)
+ENDIF()
+
+##################################################################################################################
+## configure
+
 INCLUDE(CheckTypeSize)
 INCLUDE(CheckCSourceCompiles)
 INCLUDE(CheckIncludeFile)
@@ -197,7 +206,7 @@ ELSE()
 ENDIF()
 
 ##################################################################################################################
-## configure
+## generate config.h
 
 FILE(MAKE_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/_include_/cmake_generated")
 INCLUDE_DIRECTORIES("${CMAKE_CURRENT_BINARY_DIR}/_include_")
