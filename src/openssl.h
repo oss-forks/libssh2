@@ -37,6 +37,18 @@
  * OF SUCH DAMAGE.
  */
 
+#ifdef OPENSSL_OPENSSLCONF_H
+#include OPENSSL_OPENSSLCONF_H
+#include OPENSSL_SHA_H
+#ifndef OPENSSL_NO_MD5
+#include OPENSSL_MD5_H
+#endif
+#include OPENSSL_EVP_H
+#include OPENSSL_HMAC_H
+#include OPENSSL_BN_H
+#include OPENSSL_PEM_H
+#include OPENSSL_RAND_H
+#else
 #include <openssl/opensslconf.h>
 #include <openssl/sha.h>
 #ifndef OPENSSL_NO_MD5
@@ -47,6 +59,7 @@
 #include <openssl/bn.h>
 #include <openssl/pem.h>
 #include <openssl/rand.h>
+#endif
 
 #ifdef OPENSSL_NO_RSA
 # define LIBSSH2_RSA 0

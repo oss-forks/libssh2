@@ -37,7 +37,7 @@
  */
 
 #include "libssh2_priv.h"
-#include "libssh2_publickey.h"
+#include "../include/libssh2_publickey.h"
 #include "channel.h"
 #include "session.h"
 

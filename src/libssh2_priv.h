@@ -96,9 +96,9 @@
 #include <inttypes.h>
 #endif
 
-#include "libssh2.h"
-#include "libssh2_publickey.h"
-#include "libssh2_sftp.h"
+#include "../include/libssh2.h"
+#include "../include/libssh2_publickey.h"
+#include "../include/libssh2_sftp.h"
 #include "misc.h" /* for the linked list stuff */
 
 #ifndef FALSE

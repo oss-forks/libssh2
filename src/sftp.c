@@ -40,7 +40,7 @@
 #include <assert.h>
 
 #include "libssh2_priv.h"
-#include "libssh2_sftp.h"
+#include "../include/libssh2_sftp.h"
 #include "channel.h"
 #include "session.h"
 #include "sftp.h"

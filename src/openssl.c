@@ -197,8 +197,13 @@ _libssh2_cipher_crypt(_libssh2_cipher_ctx * ctx,
 
 #if LIBSSH2_AES_CTR
 
+#ifdef OPENSSL_AES_H
+#include OPENSSL_AES_H
+#include OPENSSL_EVP_H
+#else
 #include <openssl/aes.h>
 #include <openssl/evp.h>
+#endif
 
 typedef struct
 {
