@@ -38,8 +38,8 @@
 
 #include "libssh2_priv.h"
 #ifdef LIBSSH2_HAVE_ZLIB
-# ifdef ZLIB_H
-# include ZLIB_H
+# ifdef ZLIB_ZLIB_H
+# include ZLIB_ZLIB_H
 # else
 # include <zlib.h>
 # endif
